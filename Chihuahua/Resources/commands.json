@@ -1,0 +1,35 @@
+[
+  {
+    "Token": "SPEAK",
+    "ID": 2,
+    "AppendNewline": true,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Message ID",
+        "Type": "Int"
+      }
+    ]
+  },
+
+  {
+    "Token": "COLOR",
+    "ID": 3,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Color ID",
+        "ParameterType": "String"
+      }
+    ]
+  },
+  
+    {
+    "Token": "TOKEN_005F",
+    "ID": 95,
+    "AppendNewline": true,
+    "ParameterCount": 0,
+    "Parameters": []
+  }
+]
