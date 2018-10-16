@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Collections.Generic;
 
 namespace Chihuahua
 {
@@ -29,16 +30,63 @@ namespace Chihuahua
 
         public void ReadBinary(Stream strm)
         {
-            for (int i = 0; i < ParameterCount; i++)
+            switch (Token)
             {
-                Parameters[i].ReadBinary(strm);
+                // RAMDOMJUMP can have a variable number of parameters,
+                // so we have to deal with it separately from the others.
+                case "RAMDOMJMP":
+                    Parameters[0].ReadBinary(strm); // Load in the number of paths
+                    List<int> path_offsets = new List<int>();
+
+                    // Load the path offsets
+                    for (int i = 0; i < (int)Parameters[0].Value; i++)
+                    {
+                        byte[] buf = new byte[4];
+                        strm.Read(buf, 0, 4);
+                        path_offsets.Add(BitConverter.ToInt32(buf));
+                    }
+
+                    Parameters[1].Value = path_offsets;
+                    break;
+                case "CHOICE":
+                    Parameters[0].ReadBinary(strm); // Load in the number of choices
+                    List<int> choice_text_ids = new List<int>();
+
+                    // Load the choice text ids
+                    for (int i = 0; i < (int)Parameters[0].Value; i++)
+                    {
+                        byte[] buf = new byte[4];
+                        strm.Read(buf, 0, 4);
+                        choice_text_ids.Add(BitConverter.ToInt32(buf));
+                    }
+
+                    Parameters[1].Value = choice_text_ids;
+
+                    List<int> choice_offsets = new List<int>();
+
+                    // Load the choice offsets
+                    for (int i = 0; i < (int)Parameters[0].Value; i++)
+                    {
+                        byte[] buf = new byte[4];
+                        strm.Read(buf, 0, 4);
+                        choice_offsets.Add(BitConverter.ToInt32(buf));
+                    }
+
+                    Parameters[2].Value = choice_offsets;
+                    break;
+                default:
+                    for (int i = 0; i < ParameterCount; i++)
+                    {
+                        Parameters[i].ReadBinary(strm);
+                    }
+                    break;
             }
-        }
+      }
 
         public void WriteToken(Stream strm)
         {
             string token_str = $"<{ Token }>";
-            strm.Write(Encoding.ASCII.GetBytes(token_str), (int)strm.Position, token_str.Length);
+            strm.Write(Encoding.ASCII.GetBytes(token_str), 0, token_str.Length);
 
             for (int i = 0; i < ParameterCount; i++)
             {
@@ -53,7 +101,7 @@ namespace Chihuahua
 
         public void WriteBinary(Stream strm)
         {
-            strm.Write(BitConverter.GetBytes(ID), (int)strm.Position, 4);
+            strm.Write(BitConverter.GetBytes(ID), 0, 4);
 
             for (int i = 0; i < ParameterCount; i++)
             {

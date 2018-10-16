@@ -31,20 +31,27 @@ namespace Chihuahua
         /// <param name="file_data">Byte array representing the .bev file</param>
         public void LoadBinary(byte[] file_data)
         {
+            Stack<long> branch_read_positions = new Stack<long>();
+
             using (MemoryStream mem = new MemoryStream(file_data))
             {
                 while (mem.Position != mem.Length)
                 {
-                    byte[] buf = new byte[2];
-                    int bytes_red = mem.Read(buf, 0, 2);
-
-                    ushort command_id = BitConverter.ToUInt16(buf);
-
-                    Command cmd = new Command(m_CommandTemplates.Find(x => x.ID == command_id));
-                    cmd.ReadBinary(mem);
-                    Commands.Add(cmd);
+                    ReadCommand(mem, branch_read_positions);
                 }
             }
+        }
+
+        private void ReadCommand(Stream strm, Stack<long> read_positions)
+        {
+            byte[] buf = new byte[2];
+            int bytes_red = strm.Read(buf, 0, 2);
+
+            ushort command_id = BitConverter.ToUInt16(buf);
+
+            Command cmd = new Command(m_CommandTemplates.Find(x => x.ID == command_id));
+            cmd.ReadBinary(strm);
+            Commands.Add(cmd);
         }
 
         /// <summary>

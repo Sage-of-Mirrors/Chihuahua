@@ -1,17 +1,35 @@
 [
   {
+    "Token": "WINDOW",
+    "ID": 0,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "WindowPositionID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "SAY",
+    "ID": 1,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
     "Token": "SPEAK",
     "ID": 2,
     "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
-        "Name": "Message ID",
+        "Name": "MessageID",
         "Type": "Int"
       }
     ]
   },
-
   {
     "Token": "COLOR",
     "ID": 3,
@@ -19,15 +37,1063 @@
     "ParameterCount": 1,
     "Parameters": [
       {
-        "Name": "Color ID",
-        "ParameterType": "String"
+        "Name": "TextboxTypeID",
+        "Type": "Int"
       }
     ]
   },
-  
-    {
-    "Token": "TOKEN_005F",
+  {
+    "Token": "CLOSEWINDOW",
+    "ID": 4,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "WindowID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "WAIT",
+    "ID": 5,
+    "AppendNewline": true,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "WaitTime",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "LUIGISTOP",
+    "ID": 6,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGIFREE",
+    "ID": 7,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "HP",
+    "ID": 8,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "HPMAX",
+    "ID": 9,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMERA",
+    "ID": 10,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMERAWAIT",
+    "ID": 11,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "FLAGON",
+    "ID": 12,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Flag",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "FLAGOFF",
+    "ID": 13,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "FlagID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "CHECKFLAG",
+    "ID": 14,
+    "AppendNewline": true,
+    "ParameterCount": 3,
+    "Parameters": [
+      {
+        "Name": "Flag",
+        "Type": "Int"
+      },
+      {
+        "Name": "TrueBranch",
+        "Type": "Int"
+      },
+      {
+        "Name": "FalseBranch",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "CASE",
+    "ID": 15,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Label",
+        "Type": "String"
+      }
+    ]
+  },
+  {
+    "Token": "ACTOR",
+    "ID": 16,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Name",
+        "Type": "String"
+      }
+    ]
+  },
+  {
+    "Token": "ACT",
+    "ID": 17,
+    "AppendNewline": true,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "AnimationName",
+        "Type": "String"
+      }
+    ]
+  },
+  {
+    "Token": "LOOK",
+    "ID": 18,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "ActorTarget",
+        "Type": "String"
+      }
+    ]
+  },
+  {
+    "Token": "PATH",
+    "ID": 19,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "STOP",
+    "ID": 20,
+    "AppendNewline": true,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "FREE",
+    "ID": 21,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "SE",
+    "ID": 22,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "SoundID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "LEVSE",
+    "ID": 23,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LEVSTOP",
+    "ID": 24,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BGM",
+    "ID": 25,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "MusicID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "BGMSTOP",
+    "ID": 26,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "KEYLOCK",
+    "ID": 27,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "KEYUNLOCK",
+    "ID": 28,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LIGHT",
+    "ID": 29,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "WARP",
+    "ID": 30,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "MapID",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "POS",
+    "ID": 31,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "EVENTWAIT",
+    "ID": 32,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ANYKEY",
+    "ID": 33,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CHOICE",
+    "ID": 34,
+    "AppendNewline": false,
+    "ParameterCount": 3,
+    "Parameters": [
+      {
+        "Name": "ChoiceCount",
+        "Type": "Int"
+      },
+      {
+        "Name": "ChoiceTextIDs",
+        "Type": "List"
+      },
+      {
+        "Name": "ChoiceOffsets",
+        "Type": "List"
+      }
+    ]
+  },
+  {
+    "Token": "GCAMERA",
+    "ID": 35,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMERAEND",
+    "ID": 36,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "COLON",
+    "ID": 37,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "COLOFF",
+    "ID": 38,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALPHA",
+    "ID": 39,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "AlphaValue",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "SHADOWON",
+    "ID": 40,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "SHADOWOFF",
+    "ID": 41,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "PATHLIGHT",
+    "ID": 42,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GPATHLIGHT",
+    "ID": 43,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "RAMDOMJMP",
+    "ID": 44,
+    "AppendNewline": false,
+    "ParameterCount": 2,
+    "Parameters": [
+      {
+        "Name": "PathCount",
+        "Type": "Int"
+      },
+      {
+        "Name": "Paths",
+        "Type": "List"
+      }
+    ]
+  },
+  {
+    "Token": "BODYON",
+    "ID": 45,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BODYOFF",
+    "ID": 46,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CLEARCOUNT",
+    "ID": 47,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "COUNTUP",
+    "ID": 48,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "COUNTJMP",
+    "ID": 49,
+    "AppendNewline": false,
+    "ParameterCount": 3,
+    "Parameters": [
+      {
+        "Name": "Path1Offset",
+        "Type": "Int"
+      },
+      {
+        "Name": "Path2Offset",
+        "Type": "Int"
+      },
+      {
+        "Name": "Path3Offset",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "FRAMESTART",
+    "ID": 50,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "FRAMEEND",
+    "ID": 51,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "SETCLEANER",
+    "ID": 52,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BEAM",
+    "ID": 53,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BEAMON",
+    "ID": 54,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BEAMOFF",
+    "ID": 55,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "BEAMCUT",
+    "ID": 56,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "PATHLIGHTEND",
+    "ID": 57,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "REPLACE",
+    "ID": 58,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "EFFECT",
+    "ID": 59,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TITLE",
+    "ID": 60,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "FULLSCREEN",
+    "ID": 61,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "NORMALSCREEN",
+    "ID": 62,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "MASKON",
+    "ID": 63,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "MASKOFF",
+    "ID": 64,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "WEAPON",
+    "ID": 65,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "NOWEAPON",
+    "ID": 66,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGELTON",
+    "ID": 67,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGELTOFF",
+    "ID": 68,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GHOSTTOTAL",
+    "ID": 69,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "PDEMO",
+    "ID": 70,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "OPENING",
+    "ID": 71,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMTARGET",
+    "ID": 72,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GHOSTRESET",
+    "ID": 73,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GENON",
+    "ID": 74,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "ActorTarget",
+        "Type": "String"
+      }
+    ]
+  },
+  {
+    "Token": "GENOFF",
+    "ID": 75,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "PLIGHT",
+    "ID": 76,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "HLIGHTON",
+    "ID": 77,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "HLIGHTOFF",
+    "ID": 78,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALLSTOP",
+    "ID": 79,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALLSTART",
+    "ID": 80,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TIMESTOP",
+    "ID": 81,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TIMEACTIVE",
+    "ID": 82,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ACTIVE",
+    "ID": 83,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "COUNTJMP2",
+    "ID": 84,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "DISPOFF",
+    "ID": 85,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "DISPON",
+    "ID": 86,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ACCOUNT",
+    "ID": 87,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "SETLUIGI",
+    "ID": 88,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALLNOCONTROL",
+    "ID": 89,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALLCONTROL",
+    "ID": 90,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "WARPMOVE",
+    "ID": 91,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "KILL",
+    "ID": 92,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "THUNDERN",
+    "ID": 93,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "MENUON",
+    "ID": 94,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "MENUOFF",
     "ID": 95,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "WIPEKIND",
+    "ID": 96,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "WipeType",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "CAMENDFAST",
+    "ID": 97,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LLIGHTON",
+    "ID": 98,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LLIGHTOFF",
+    "ID": 99,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "SAVE",
+    "ID": 100,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "NECKOFF",
+    "ID": 101,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "NECKON",
+    "ID": 102,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMTARGET2",
+    "ID": 103,
+    "AppendNewline": false,
+    "ParameterCount": 2,
+    "Parameters": [
+      {
+        "Name": "TargetActor",
+        "Type": "String"
+      },
+      {
+        "Name": "Speed",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "CHECKTELESA",
+    "ID": 104,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ENDING",
+    "ID": 105,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "WIPETIME",
+    "ID": 106,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GALLERY",
+    "ID": 107,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CONTEXP",
+    "ID": 108,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGISTOP2",
+    "ID": 109,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGIFREE2",
+    "ID": 110,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "OVERLAP",
+    "ID": 111,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMMODEON",
+    "ID": 112,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMMODEOFF",
+    "ID": 113,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ENDLESS",
+    "ID": 114,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CAMSHAKE",
+    "ID": 115,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "FORCEMOVE",
+    "ID": 116,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TURNOFF",
+    "ID": 117,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TURNON",
+    "ID": 118,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "HSAVE",
+    "ID": 119,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TIMERSTOP",
+    "ID": 120,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "THUNDERN2",
+    "ID": 121,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "ALPHAF",
+    "ID": 122,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "MANLIGHT",
+    "ID": 123,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GAMEBOYOFF",
+    "ID": 124,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "GAMEBOYON",
+    "ID": 125,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "CANCEL",
+    "ID": 126,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "LUIGISTOP3",
+    "ID": 127,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "URALUIGI",
+    "ID": 128,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "OMOTELUIGI",
+    "ID": 129,
+    "AppendNewline": false,
+    "ParameterCount": 0,
+    "Parameters": []
+  },
+  {
+    "Token": "TOKEN_0086",
+    "ID": 134,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "Unknown1",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "TOKEN_0089",
+    "ID": 137,
+    "AppendNewline": false,
+    "ParameterCount": 2,
+    "Parameters": [
+      {
+        "Name": "Unknown1",
+        "Type": "Int"
+      },
+      {
+        "Name": "Unknown2",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "LUIGI",
+    "ID": 138,
+    "AppendNewline": false,
+    "ParameterCount": 1,
+    "Parameters": [
+      {
+        "Name": "LUIGI_or_GOOIGI",
+        "Type": "Int"
+      }
+    ]
+  },
+  {
+    "Token": "END",
+    "ID": 207,
     "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []

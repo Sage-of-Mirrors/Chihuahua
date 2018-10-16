@@ -8,7 +8,8 @@ namespace Chihuahua
     public enum ParameterType
     {
         Int,
-        String
+        String,
+        List
     }
 
     public struct Parameter
@@ -30,7 +31,7 @@ namespace Chihuahua
             {
                 case ParameterType.Int:
                     byte[] buf = new byte[4];
-                    strm.Read(buf, (int)strm.Position, 4);
+                    strm.Read(buf, 0, 4);
                     Value = BitConverter.ToInt32(buf);
 
                     break;
@@ -56,12 +57,12 @@ namespace Chihuahua
             {
                 case ParameterType.Int:
                     string int_token = $"({ (int)Value })";
-                    strm.Write(Encoding.ASCII.GetBytes(int_token), (int)strm.Position, int_token.Length);
+                    strm.Write(Encoding.ASCII.GetBytes(int_token), 0, int_token.Length);
 
                     break;
                 case ParameterType.String:
                     string str_token = $"\"{ (string)Value }\"";
-                    strm.Write(Encoding.ASCII.GetBytes(str_token), (int)strm.Position, str_token.Length);
+                    strm.Write(Encoding.ASCII.GetBytes(str_token), 0, str_token.Length);
 
                     break;
             }
@@ -73,11 +74,11 @@ namespace Chihuahua
             {
                 case ParameterType.Int:
                     int int_val = (int)Value;
-                    strm.Write(BitConverter.GetBytes(int_val), (int)strm.Position, 4);
+                    strm.Write(BitConverter.GetBytes(int_val), 0, 4);
                     break;
                 case ParameterType.String:
                     string str_val = (string)Value;
-                    strm.Write(Encoding.ASCII.GetBytes(str_val), (int)strm.Position, str_val.Length);
+                    strm.Write(Encoding.ASCII.GetBytes(str_val), 0, str_val.Length);
                     strm.WriteByte(0);
                     break;
             }
