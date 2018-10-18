@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using Chihuahua;
 
 namespace Beverly
@@ -18,6 +19,10 @@ namespace Beverly
 
             Event ev = new Event();
             ev.LoadBinary(file_data);
+
+            byte[] test = ev.WriteText();
+            string blah = Encoding.ASCII.GetString(test);
+            System.Console.Write(blah);
         }
     }
 }

@@ -2,10 +2,11 @@
 using System.IO;
 using System.Text;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace Chihuahua
 {
-    public struct Command
+    public class Command
     {
         public string Token { get; set; }
         public ushort ID { get; set; }
@@ -13,6 +14,16 @@ namespace Chihuahua
         public bool AppendNewline { get; set; }
 
         public Parameter[] Parameters { get; set; }
+
+        [JsonConstructor]
+        public Command(string token, ushort id, int parameter_count, bool append_new_line, Parameter[] parameters)
+        {
+            Token = token;
+            ID = id;
+            ParameterCount = parameter_count;
+            AppendNewline = append_new_line;
+            Parameters = parameters;
+        }
 
         public Command(Command src)
         {

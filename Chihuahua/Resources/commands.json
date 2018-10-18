@@ -45,7 +45,7 @@
   {
     "Token": "CLOSEWINDOW",
     "ID": 4,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -111,7 +111,7 @@
   {
     "Token": "FLAGON",
     "ID": 12,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -123,7 +123,7 @@
   {
     "Token": "FLAGOFF",
     "ID": 13,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -155,7 +155,7 @@
   {
     "Token": "CASE",
     "ID": 15,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -224,7 +224,7 @@
   {
     "Token": "SE",
     "ID": 22,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -250,7 +250,7 @@
   {
     "Token": "BGM",
     "ID": 25,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -290,7 +290,7 @@
   {
     "Token": "WARP",
     "ID": 30,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -316,7 +316,7 @@
   {
     "Token": "ANYKEY",
     "ID": 33,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -350,7 +350,7 @@
   {
     "Token": "CAMERAEND",
     "ID": 36,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -371,7 +371,7 @@
   {
     "Token": "ALPHA",
     "ID": 39,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -383,14 +383,14 @@
   {
     "Token": "SHADOWON",
     "ID": 40,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "SHADOWOFF",
     "ID": 41,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -411,7 +411,7 @@
   {
     "Token": "RAMDOMJMP",
     "ID": 44,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 2,
     "Parameters": [
       {
@@ -441,21 +441,21 @@
   {
     "Token": "CLEARCOUNT",
     "ID": 47,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "COUNTUP",
     "ID": 48,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "COUNTJMP",
     "ID": 49,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 3,
     "Parameters": [
       {
@@ -475,14 +475,14 @@
   {
     "Token": "FRAMESTART",
     "ID": 50,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "FRAMEEND",
     "ID": 51,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -552,14 +552,14 @@
   {
     "Token": "FULLSCREEN",
     "ID": 61,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "NORMALSCREEN",
     "ID": 62,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -643,7 +643,7 @@
   {
     "Token": "GENON",
     "ID": 74,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -669,14 +669,14 @@
   {
     "Token": "HLIGHTON",
     "ID": 77,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "HLIGHTOFF",
     "ID": 78,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -718,7 +718,7 @@
   {
     "Token": "COUNTJMP2",
     "ID": 84,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -788,21 +788,21 @@
   {
     "Token": "MENUON",
     "ID": 94,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "MENUOFF",
     "ID": 95,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "WIPEKIND",
     "ID": 96,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -835,7 +835,7 @@
   {
     "Token": "SAVE",
     "ID": 100,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -856,7 +856,7 @@
   {
     "Token": "CAMTARGET2",
     "ID": 103,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 2,
     "Parameters": [
       {
@@ -907,14 +907,14 @@
   {
     "Token": "LUIGISTOP2",
     "ID": 109,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
   {
     "Token": "LUIGIFREE2",
     "ID": 110,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -949,7 +949,7 @@
   {
     "Token": "CAMSHAKE",
     "ID": 115,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -998,7 +998,7 @@
   {
     "Token": "ALPHAF",
     "ID": 122,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 0,
     "Parameters": []
   },
@@ -1054,7 +1054,7 @@
   {
     "Token": "TOKEN_0086",
     "ID": 134,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 1,
     "Parameters": [
       {
@@ -1066,7 +1066,7 @@
   {
     "Token": "TOKEN_0089",
     "ID": 137,
-    "AppendNewline": false,
+    "AppendNewline": true,
     "ParameterCount": 2,
     "Parameters": [
       {
